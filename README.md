@@ -1,5 +1,5 @@
 ### Sort-and-Search
-A C program with Bubble sort and Binary search algorithm
+C programs with various sort and search algorithm
 
 Version 1: Only has Bubble sort algorithm at the moment. Uses pre-included data set.
 
