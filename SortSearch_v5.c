@@ -42,7 +42,7 @@ int main(void)
     
     do
     {
-        if (search == array[midval(i, count-1)]) // if the search 
+        if (search == array[midval(i, count-1)])
         {
             printf("The character exists in the list.\n");
             return 0;
