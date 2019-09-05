@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <cs50.h>
 #include <time.h>
 
 void swap(int *x, int *y);
