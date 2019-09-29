@@ -1,39 +1,45 @@
 #include <stdio.h>
-#include <time.h>
+
+#define NUMBERS 20
 
 void swap(int *x, int *y);
 int main(void)
 {
     // creating an array of numbers
-    int numbers[20] = {13,12,9,2,4,7,8,20,16,14,1,5,3,19,15,6,18,10,17,11};
+    int numbers[NUMBERS] = {122, 13, 9, 2, 44, 7, 81, 202, 16, 14, 
+                            14, 51, 34, 19, 100, 150, 18, 10, 17, 11};
     
-    printf("The unsorted numbers are: %i, %i, %i, %i, %i, %i, %i, %i, %i, %i, %i, %i, %i, %i, %i, %i, %i, %i, %i, %i.\n", numbers[0], numbers[1], numbers[2], numbers[3], numbers[4], numbers[5], numbers[6], numbers[7], numbers[8], numbers[9], numbers[10], numbers[11], numbers[12], numbers[13], numbers[14], numbers[15], numbers[16], numbers[17], numbers[18], numbers[19]);
-    
-    // sorting - bubble sort
-    
-    int j=19;
+    puts("The unsorted numbers are: ");
+    for (int i = 0; i < NUMBERS; i++) {
+        printf("%d ", numbers[i]);
+    }
+
+    // sorting - bubble sort    
+    int j = NUMBERS - 1;
     do
     {
-        for (int i=0; i<j; i++)
+        for (int i = 0; i < j; i++)
         {
-            if (numbers[i] > numbers[i+1])
+            if (numbers[i] > numbers[i + 1])
             {
-                swap(&numbers[i],&numbers[i+1]);
+                swap(&numbers[i], &numbers[i + 1]);
             }
         }
         j--;
     }
     while (j != 0);
-    
-
-    
-    printf("The sorted numbers are: %i, %i, %i, %i, %i, %i, %i, %i, %i, %i, %i, %i, %i, %i, %i, %i, %i, %i, %i, %i.\n", numbers[0], numbers[1], numbers[2], numbers[3], numbers[4], numbers[5], numbers[6], numbers[7], numbers[8], numbers[9], numbers[10], numbers[11], numbers[12], numbers[13], numbers[14], numbers[15], numbers[16], numbers[17], numbers[18], numbers[19]);
+        
+    puts("\nThe sorted numbers are: ");
+    for (int i = 0; i < NUMBERS; i++) {
+        printf("%d ", numbers[i]);
+    }
+    printf("\n");
 }
 
 void swap(int *x, int *y)
 {
-    int temp[1];
-    temp[0] = *x;
+    int temp;
+    temp = *x;
     *x = *y;
-    *y = temp[0];
+    *y = temp;
 }
